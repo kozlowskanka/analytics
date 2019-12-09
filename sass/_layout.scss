@@ -1,0 +1,254 @@
+/* Global */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  font-family: $paragraph-font;
+  color: $main-color;
+}
+
+.panel__wrapper {
+  display: flex;
+}
+
+.main__content {
+  flex: 1 1;
+}
+
+/* Sidebar */
+
+nav {
+  flex: 0 0 200px;
+}
+
+nav h2,h3,h4,h5,h6,p {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 100;
+  color: $main-color;
+}
+
+.nav {
+  &__wrapper {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background: $sidebar-color;
+    top: 0;
+    left: 0;
+    z-index:2;
+  }
+
+  &__logo {
+    width: 100%;
+
+    &--name {
+      padding-left: 25px;
+      color: $sidebar-font-color;
+      font-family: $brand-font;
+      display: inline-block;
+      margin-top: 12px;
+    }
+
+    &--icon {
+      width: 30px;
+      height: 15px;
+      display: inline-block;
+      margin-left: 30px;
+    }
+
+    &--burger {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        border-radius: 2px;
+        background: $main-medium-color;
+        box-shadow:
+          0 7px 0 0 $main-medium-color,
+          0 14px 0 0 $main-medium-color;
+      }
+    }
+  }
+
+  &__menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $sidebar-hover-color;
+
+  li {
+      height: 45px;
+      width: 100%;
+    }
+
+    li a {
+      text-decoration: none;
+    }
+
+    &__item {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      border-left: 3px solid $sidebar-color;
+
+      &:hover {
+        background-color: #333333;
+        border-left: 3px solid $hover-light-color;
+        color: $sidebar-font-color;
+
+        svg {
+          fill: $sidebar-font-color;
+        }
+      }
+    }
+
+    &__image {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+
+      svg {
+        fill: $main-color;
+      }
+    }
+  }
+
+  &__people {
+    width: 100%;
+    height: 150px;
+    padding-left: 20px;
+
+    &__title {
+      text-transform: uppercase;
+    }
+
+    &__managers {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 30px;
+
+      li {
+        height: 45px;
+        width: 100%;
+        @include flex(row, center, flex-start);
+      }
+
+      h4 {
+        color: $link-color;
+        display: inline-block;
+      }
+    }
+
+    &__avatar {
+      width: 40px;
+      height: 40px;
+      background-color: blue;
+      border-radius: 20px;
+      display: inline-block;
+      margin-right: 15px;
+      overflow: hidden;
+      object-fit: cover;
+      @include flex(row, center, center);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+/* Header */
+
+.header {
+  width: calc(100% - 200px);
+  height: 60px;
+  z-index: 1;
+  position: fixed;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: $header-color;
+    box-shadow: 0px 3px 14px -12px rgba(0,0,0,0.35);
+  }
+
+  &__items {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding:0;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    @include flex(row, center, center);
+  }
+
+  &__items li {
+    display: inline-block;
+    height: 60px;
+    @include flex(row, center, center);
+    border-left: 0.5px solid $main-medium-color;
+    padding: 0 20px;
+  }
+
+  &__item-total {
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  &__item-user {
+    font-size: 13px;
+    color: $link-color;
+    margin-left: 15px;
+    margin-top: -3px;
+  }
+
+  &__item__message--new {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: $hover-color;
+    margin-left: -8px;
+    margin-top: - 15px;
+  }
+
+  &__item__image svg {
+    fill: $main-color;
+    display: inline-block;
+  }
+}
+
+/* Content */
+
+.content {
+    &__wrapper {
+    margin-top: 60px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  &__data {
+    width: 100%;
+    height: 1000px;
+    background-color: $header-color;
+    box-shadow: 0px 0px 21px -12px rgba(0,0,0,0.35);
+    color: $main-color;
+  }
+}
