@@ -241,6 +241,10 @@ nav h2,h3,h4,h5,h6,p {
 
 /* Content */
 
+h4 {
+  font-weight: 600;
+}
+
 .content {
     &__wrapper {
     margin-top: 60px;
@@ -250,26 +254,44 @@ nav h2,h3,h4,h5,h6,p {
 
   &__data {
     width: 100%;
+    margin-bottom: 20px;
     background-color: $header-color;
     box-shadow: 0px 0px 21px -12px rgba(0,0,0,0.35);
     color: $main-color;
+
+    &__title {
+      width: 100%;
+      height: 40px;
+      @include flex(row, center, flex-start);
+      padding-left: 15px;
+      text-transform: uppercase;
+      border-bottom: 0.5px solid $main-medium-color;
+    }
+
+    &__calendar {
+      @include flex(row, center, center);
+      height: 100px;
+      border-bottom: 0.5px solid $main-medium-color;
+    }
+
+    &__stats {
+      @include flex(column, center, center);
+    }
+
+    &__links {
+      @include flex(column, center, center);
+      margin: 0 0 20px 0;
+    }
   }
 }
 
-.content__data__title {
-  width: 100%;
-  height: 40px;
-  @include flex(row, center, flex-start);
-  padding-left: 15px;
-  text-transform: uppercase;
-  border-bottom: 0.5px solid $main-medium-color;
+.results__wrapper {
+  width: 75%;
+  max-width: 900px;
+  margin: 0;
 }
 
-.content__data__calendar {
-  @include flex(row, center, center);
-  height: 100px;
-  border-bottom: 0.5px solid $main-medium-color;
-}
+/* Calndar */
 
 .calendar__dates{
   width: 320px;
@@ -279,20 +301,288 @@ nav h2,h3,h4,h5,h6,p {
   margin: 10px;
   font-size: 14px;
   @include flex(row, center, space-around);
+
+  & > :first-child{
+    border-right: 0.5px solid $main-medium-color;
+  }
+
+  &__item {
+    width: 100%;
+    padding-left: 15px;
+  }
+
+  &__image{
+    margin-right: 15px;
+    fill: $main-color;
+  }
 }
 
-.calendar__dates > :first-child{
-  border-right: 0.5px solid $main-medium-color;
+/* Results */
+
+.numbers {
+  list-style: none;
+  margin: 40px 0 60px 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    flex: 40%;
+    height: 40px;
+    border-bottom: 0.5px solid $main-medium-color;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  span {
+    font-weight: 400;
+    color: $sidebar-color;
+  }
+
+  &__item {
+
+    &-left {
+    margin-right: 20px;
+    }
+
+    &-right {
+      margin-left: 20px;
+    }
+  }
 }
 
-.calendar__dates__item {
-  width: 100%;
-  padding-left: 15px;
+/* Chart */
+.legend {
+
+  &__wrapper {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    height: 80px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    height: 40px;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin: 0 20px;
+    @include flex(row, center, center);
+
+    &:hover {
+      background-color: $main-light-color;
+    }
+
+    & > p {
+      font-size: 16px;
+    }
+
+    &--active {
+      background-color: $main-light-color;
+    }
+  }
+
+  &__element {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin-right: 8px;
+  }
 }
 
-.calendar__dates__image{
-  margin-right: 15px;
-  fill: $main-color;
+#signups{
+  background-color: $link-color;
+}
+
+#FTD{
+  background-color: $hover-color;
+}
+
+#earned{
+  background-color: $positive-color;
+}
+
+.chart {
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__axis__vertical {
+    flex: calc(100% / 11);
+    display: flex;
+    padding-right: 10px;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  &__axis__horizontal__wrapper {
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__bar {
+    width: 35%;
+    background-color: green;
+
+    &__graph {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__columns {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &__result {
+      flex: calc(100% / 11);
+      border-left: 0.5px solid $main-medium-color;
+      border-bottom: 0.5px solid $main-medium-color;
+
+      &:first-child {
+        border-bottom: none;
+        border-left: 0.5px solid $main-medium-color;
+      }
+    }
+  }
+}
+
+.horizontal__axis__item {
+  flex: calc(100% / 11);
+}
+
+[value="50"] {
+  height: 5%;
+}
+
+[value="100"] {
+  height: 10%;
+}
+
+[value="150"]  {
+  height: 25%;
+}
+
+[value="200"] {
+  height: 33%;
+}
+
+[value="250"] {
+  height: 40%;
+}
+
+[value="300"] {
+  height: 50%;
+}
+
+[value="350"] {
+  height: 60%;
+}
+
+[value="400"] {
+  height: 65%;
+}
+
+[value="450"] {
+  height: 70%;
+}
+
+[value="500"] {
+  height: 80%;
+}
+
+[value="550"] {
+  height: 90%;
+}
+
+[value="600"]  {
+  height: 100%;
+}
+
+.button__wrapper {
+  @include flex(row, center, center);
+  height: 40px;
+  margin: 20px 0 20px 0;
+}
+
+.links {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 0.5px solid $main-medium-color;
+
+      &:hover {
+        background-color: $main-light-color
+      }
+
+      &:first-child{
+        border-top: 0.5px solid $main-medium-color;
+      }
+    }
+  }
+}
+
+.links_list__item {
+
+  &__name{
+    padding-left: 10px;
+    flex: 45%;
+  }
+
+  &__url {
+    flex: 40%;
+    color: $link-color;
+    font-size: 15px;
+    font-weight: 200;
+  }
+
+  &__icons {
+    flex: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-link {
+      display: none;
+      fill: $hover-color;
+      margin: 5px;
+    }
+
+    &-trash {
+      display: none;
+      fill: $main-color;
+      margin: 5px;
+    }
+  }
+}
+
+.links__list li:hover .links_list__item__icons-link {
+  display: block;
+}
+
+.links__list li:hover .links_list__item__icons-trash {
+  display: block;
 }
 
 /* Styleguide */
@@ -315,7 +605,7 @@ nav h2,h3,h4,h5,h6,p {
 .btn-danger {
   background-color: $hover-color;
 
-  &  :hover {
+  &:hover {
     background-color: $hover-light-color;
   }
 }
@@ -330,3 +620,4 @@ nav h2,h3,h4,h5,h6,p {
     background-color: $hover-light-color;
   }
 }
+
