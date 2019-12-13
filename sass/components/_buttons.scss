@@ -1,13 +1,33 @@
+/* Buttons */
 
+.btn {
+  @include btn(130px, 40px);
+  @include flex(row, center, center);
+}
 
-// .btn-success {
+.btn-regular {
+  background-color: $main-color;
 
-// }
+  &:hover {
+    background-color: $main-medium-color;
+  }
+}
 
-// .btn-danger{
+.btn-danger {
+  background-color: $hover-color;
 
-// }
+  &:hover {
+    background-color: $hover-light-color;
+  }
+}
 
-// .btn-sm {
+.btn-update {
+  @include btn(40px, 40px);
+  background-color: $hover-color;
+  margin: 10px;
+  fill: $header-color;
 
-// }
+  &:hover {
+    background-color: $hover-light-color;
+  }
+}

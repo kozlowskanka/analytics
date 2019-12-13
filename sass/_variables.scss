@@ -15,7 +15,7 @@ $hover-light-color:#ffa200;
 
 $active-color:#04AE00;
 $positive-color:#74B67A;
-$posotive-light-color:#96CC9B;
+$positive-light-color:#96CC9B;
 $negative-color: #DE5252;
 $negative-light-color:#EC7171;
 $danger-color:#FF0000;
@@ -31,3 +31,6 @@ $font-bold: 700;
 /* Fonts */
 $brand-font: 'Kalam', cursive;
 $paragraph-font: 'Roboto', sans-serif;
+
+/* Styling */
+$border-main: 0.5px solid $main-medium-color;

@@ -1,0 +1,31 @@
+/* Calendar */
+
+.calendar__wrapper {
+  @include flex(row, center, center);
+  height: 100px;
+  border-bottom: $border-main;
+}
+
+.calendar__dates{
+  width: 320px;
+  height: 40px;
+  border-radius: 8px;
+  border: $border-main;
+  margin: 10px;
+  font-size: 14px;
+  @include flex(row, center, space-around);
+
+  & > :first-child{
+    border-right: $border-main;
+  }
+
+  &__item {
+    width: 100%;
+    padding-left: 15px;
+  }
+
+  &__image{
+    margin-right: 15px;
+    fill: $main-color;
+  }
+}
