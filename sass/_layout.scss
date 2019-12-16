@@ -9,6 +9,7 @@ body {
   background-color: $background-color;
   font-family: $paragraph-font;
   color: $main-color;
+  counter-reset: my-awesome-counter;
 }
 
 .panel__wrapper {
@@ -289,42 +290,42 @@ h4 {
     display: none;
   }
 
+  .nav__wrapper {
+    display: none;
+  }
+
   /* Mobile menu */
+
+  .nav__small-screen__wrapper {
+    height: 100%;
+    width: 100%;
+    margin: 0; padding-top: 60px;
+    position: fixed;
+  }
 
   .nav__small-screen {
     display: block;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background-color: yellow;
+    height: 100%;
 
     &--invisible {
       display: none;
     }
   }
 
-  .nav__small-screen__wrapper {
-    margin-top: 60px;
-    height: 100%;
-    padding: 0;
-    width: 100%;
-    background-color: red;
-  }
-
   .nav__small-screen__list {
-    height: calc(100% - 60px);
-    margin-left: 0;
+    margin: 0;
     list-style: none;
-    background-color: blue;
+    height: 100%;
     padding-left: 0;
-    @include flex(column, center, space-between);
+    display: flex;
+    flex-direction: column;
+    background-color: $sidebar-color;
 
     li {
       flex-grow: 1;
       margin: 0;
       width: 100%;
-      background-color: $sidebar-color;
-      font-size: 18px;
+      font-size: 20px;
 
       a {
         text-decoration: none;
@@ -392,4 +393,5 @@ h4 {
     }
   }
 }
+
 

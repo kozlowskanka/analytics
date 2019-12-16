@@ -14,9 +14,12 @@
 
 @import "sections/content";
 
-@import "sections/list";
+@import "sections/table";
 
 
+/* Pages */
+@import "pages/registration";
 
+@import "pages/list";
 
-
+@import "pages/modal";

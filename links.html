@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Analytics</title>
         <link href="https://fonts.googleapis.com/css?family=Kalam|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
@@ -10,7 +11,7 @@
       <div class="panel">
         <div class="panel__wrapper">
 
-          <div class="nav__large-screen">
+          <nav class="nav__large-screen">
             <div class="nav__wrapper">
               <div class="nav__logo">
                 <h1 class="nav__logo--name">Just do it</h1>
@@ -132,14 +133,14 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </nav>
 
-          <div class="nav__small-screen nav__small-screen--invisible">
+          <nav class="nav__small-screen nav__small-screen--invisible">
             <div class = "nav__small-screen__wrapper">
               <ul class="nav__small-screen__list">
                 <li><a href="index.html">General</a></li>
                 <li><a href="details.html">Details</a></li>
-                <li><a href="liks.html">Links</a></li>
+                <li><a href="links.html">Links</a></li>
                 <li><a href="banners.html">Banners</a></li>
                 <li><a href="personal.html">Personal data</a></li>
                 <li><a href="payout.html">Payout</a></li>
@@ -150,7 +151,7 @@
                 <li><a href="logout.html">Logout</a></li>
               </ul>
             </div>
-          </div>
+          </nav>
 
           <section class="main__content">
             <header class="header">
@@ -197,13 +198,12 @@
                     </div>
                     <span class="header__item-user">Leonardo da Vinci</span>
                   </li>
-                  <li class="header__item">
+                  <li class="header__item" id="logout">
                     <div class="header__item__image">
-                        <svg width ="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      <svg width ="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 19 15" style="enable-background:new 0 0 19 15;" xml:space="preserve">
-                     <path d="M13.9,3.1l-0.7,0.7L16.3,7H3v1h13.3l-3.1,3.1l0.7,0.7l4.4-4.4L13.9,3.1z M10,14H1V1h9v3h1V0H0v15h11v-4h-1V14z"/>
-                     </svg>
-
+                       <path d="M13.9,3.1l-0.7,0.7L16.3,7H3v1h13.3l-3.1,3.1l0.7,0.7l4.4-4.4L13.9,3.1z M10,14H1V1h9v3h1V0H0v15h11v-4h-1V14z"/>
+                      </svg>
                     </div>
                   </li>
                 </ul>
@@ -219,15 +219,16 @@
               </div>
             </header>
             <main class="content__wrapper">
-              <div class="content__data">
+
+              <section class="content__data">
                 <div class="content__data__title">
                   LINKS
                 </div>
                 <div class="content__data__links">
                   <div class="button__wrapper">
-                    <div class="btn btn-danger">
+                    <button class="btn btn-danger">
                       + add new
-                    </div>
+                    </button>
                   </div>
                   <div class="results__wrapper">
                     <ul class="links__list">
@@ -235,72 +236,202 @@
                         <h4 class="links_list__item__name">Home page</h4>
                         <h4 class="links_list__item__url">http://www.homepage.com</h4>
                         <div class="links_list__item__icons">
-                          <div class="links_list__item__icons-link">
+                          <a href class="links_list__item__icons-link">
                             <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                               viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
-                              <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+                            <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
                             </svg>
-                          </div>
-                          <div class="links_list__item__icons-trash">
+                          </a>
+                          <a href class="links_list__item__icons-trash">
                             <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                               viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                              <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                             V6H8z M5,6v8h1V6H5z"/>
+                            <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+                               V6H8z M5,6v8h1V6H5z"/>
                             </svg>
-                          </div>
+                          </a>
                         </div>
                       </li>
                       <li class="links__list__item">
                         <h4 class="links_list__item__name">Current offer</h4>
                         <h4 class="links_list__item__url">http://www.currently.com</h4>
                         <div class="links_list__item__icons">
-                          <div class="links_list__item__icons-link">
+                          <a href class="links_list__item__icons-link">
                             <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                               viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
                               <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
                             </svg>
-                          </div>
-                          <div class="links_list__item__icons-trash">
+                          </a>
+                          <a href class="links_list__item__icons-trash">
                             <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                               viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
                               <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                             V6H8z M5,6v8h1V6H5z"/>
+                                   V6H8z M5,6v8h1V6H5z"/>
                             </svg>
-                          </div>
+                          </a>
                         </div>
                       </li>
                       <li class="links__list__item">
                         <h4 class="links_list__item__name">Blurpix</h4>
                         <h4 class="links_list__item__url">http://www.blurpix.com</h4>
                         <div class="links_list__item__icons">
-                          <div class="links_list__item__icons-link">
+                          <a href class="links_list__item__icons-link">
                             <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                               viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
                               <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
                             </svg>
-                          </div>
-                          <div class="links_list__item__icons-trash">
+                          </a>
+                          <a href class="links_list__item__icons-trash">
                             <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                               viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
-                              <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
-                             V6H8z M5,6v8h1V6H5z"/>
+                            <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+                                   V6H8z M5,6v8h1V6H5z"/>
                             </svg>
-                          </div>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="links__list__item">
+                        <h4 class="links_list__item__name">Your Site</h4>
+                        <h4 class="links_list__item__url">http://www.yoursite.com</h4>
+                        <div class="links_list__item__icons">
+                          <a href class="links_list__item__icons-link">
+                            <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+                              <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+                            </svg>
+                          </a>
+                          <a href class="links_list__item__icons-trash">
+                            <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+                            <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+                                   V6H8z M5,6v8h1V6H5z"/>
+                            </svg>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="links__list__item">
+                        <h4 class="links_list__item__name">Google</h4>
+                        <h4 class="links_list__item__url">http://www.google.com</h4>
+                        <div class="links_list__item__icons">
+                          <a href class="links_list__item__icons-link">
+                            <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+                              <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+                            </svg>
+                          </a>
+                          <a href class="links_list__item__icons-trash">
+                            <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+                            <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+                                   V6H8z M5,6v8h1V6H5z"/>
+                            </svg>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="links__list__item">
+                        <h4 class="links_list__item__name">Facebook</h4>
+                        <h4 class="links_list__item__url">http://www.facebook.com</h4>
+                        <div class="links_list__item__icons">
+                          <a href class="links_list__item__icons-link">
+                            <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+                              <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+                            </svg>
+                          </a>
+                          <a href class="links_list__item__icons-trash">
+                            <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+                            <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+                                   V6H8z M5,6v8h1V6H5z"/>
+                            </svg>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="links__list__item">
+                        <h4 class="links_list__item__name">Dashboard</h4>
+                        <h4 class="links_list__item__url">http://www.dashboard.com</h4>
+                        <div class="links_list__item__icons">
+                          <a href class="links_list__item__icons-link">
+                            <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+                              <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+                            </svg>
+                          </a>
+                          <a href class="links_list__item__icons-trash">
+                            <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+                            <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+                                   V6H8z M5,6v8h1V6H5z"/>
+                            </svg>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="links__list__item">
+                        <h4 class="links_list__item__name">Blurax</h4>
+                        <h4 class="links_list__item__url">http://www.blurax.com</h4>
+                        <div class="links_list__item__icons">
+                          <a href class="links_list__item__icons-link">
+                            <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+                              <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+                            </svg>
+                          </a>
+                          <a href class="links_list__item__icons-trash">
+                            <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+                            <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+                                   V6H8z M5,6v8h1V6H5z"/>
+                            </svg>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="links__list__item">
+                        <h4 class="links_list__item__name">Twitter</h4>
+                        <h4 class="links_list__item__url">http://www.twitter.com</h4>
+                        <div class="links_list__item__icons">
+                          <a href class="links_list__item__icons-link">
+                            <svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+                              <path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+                            </svg>
+                          </a>
+                          <a href class="links_list__item__icons-trash">
+                            <svg width="17px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+                            <path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+                                   V6H8z M5,6v8h1V6H5z"/>
+                            </svg>
+                          </a>
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div class="button__wrapper">
-                    <div class="btn btn-danger">
+                    <button class="btn btn-danger">
                       + add new
-                    </div>
+                    </button>
                   </div>
                 </div>
-              </div>
+              </section>
+
             </main>
+
+            <div class="overlay" id="overlay">
+              <div class="modal" id="modal__logout">
+                <button class="btn-close modal__close">x</button>
+
+                <h4>Wyloguj</h4>
+                <p>Aby wylogować kliknij OK</p>
+
+                <button class="btn btn-update modal__close">OK</button>
+              </div>
+
+
+            </div>
+
           </section>
         </div>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
       <script src="js/script.js"></script>
     </body>
 </html>

@@ -1,0 +1,128 @@
+/* Table */
+
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 20px;
+
+  th,td {
+    padding: 5px;
+    text-align: center;
+  }
+
+  th {
+    border-bottom: $border-main;
+
+    h4 {
+      padding: 5px;
+    }
+  }
+
+  td {
+    color: $sidebar-color;
+    padding: 10px 0;
+  }
+}
+
+table th h4:hover {
+  background-color: $main-light-color;
+  color: $sidebar-color;
+  border-radius: 5px;
+}
+
+.table__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table__body__row {
+  border-bottom: $border-main;
+
+  &:hover {
+    background-color: $main-light-color;
+  }
+}
+
+/* Table page*/
+
+.table {
+
+  &__page {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__nav {
+
+    &__number {
+      padding: 15px;
+      color: $link-color;
+      @include flex(row, center, center);
+
+      &:hover {
+        color: $main-color;
+        background-color: $main-light-color;
+        border-radius: 5px;
+      }
+    }
+
+    &__arrow {
+      @include flex(row, center, center);
+      fill: $main-color;
+      padding: 15px;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+
+  table {
+    border: 0;
+
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+
+    tr {
+      display: block;
+    }
+
+
+    td {
+      display: block;
+      padding: 10px;
+      text-align: right;
+      color: $sidebar-color;
+
+      &::before {
+        content: attr(data-label);
+        float: left;
+        color: $main-color;
+        font-weight: 600;
+        border-bottom: red;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .table__body__row:hover {
+    background-color: $header-color;
+  }
+}

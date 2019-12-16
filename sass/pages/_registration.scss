@@ -1,0 +1,56 @@
+/* Form */
+
+.form {
+  @include flex(column, center, center);
+  width: 100%;
+}
+
+.form__block {
+  width: 100%;
+  padding: 30px;
+  border-bottom: $border-main;
+  @include flex(row, center, center);
+}
+
+fieldset {
+  border: 0 none;
+  width: 60%;
+  padding: 20px;
+}
+
+.form__block__row {
+  @include flex(row, center, center);
+  width: 100%;
+  margin: 20px 0;
+
+  input::placeholder {
+    color: $hover-color;
+    font-size: 15px;
+  }
+}
+
+.form__label {
+  flex: 30%;
+  padding-right: 5px;
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.form__input {
+  flex: 70%;
+  height: 30px;
+  border: $border-main;
+  border-radius: 5px;
+  padding-left: 10px;
+  outline-color: $hover-color;
+}
+
+
+@media (max-width: 767px) {
+  fieldset {
+    width: 90%;
+    padding: 0;
+  }
+}

@@ -20,7 +20,7 @@
       border-bottom: $border-main;
 
       &:hover {
-        background-color: $main-light-color
+        background-color: $main-light-color;
       }
 
       &:first-child{
@@ -76,5 +76,14 @@
 
   .links__list li {
     flex-direction: column;
+  }
+
+  .links__list__item {
+
+    h4 {
+      font-size: 18px;
+      margin: 10px 0 5px 0;
+      overflow: hidden;
+    }
   }
 }

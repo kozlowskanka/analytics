@@ -1,5 +1,9 @@
 /* Buttons */
 
+button {
+  border: none;
+}
+
 .btn {
   @include btn(130px, 40px);
   @include flex(row, center, center);

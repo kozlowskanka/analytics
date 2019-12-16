@@ -7,12 +7,12 @@
 }
 
 .calendar__dates{
-  width: 320px;
   height: 40px;
   border-radius: 8px;
   border: $border-main;
   margin: 10px;
   font-size: 14px;
+  padding-left: 5px;
   @include flex(row, center, space-around);
 
   & > :first-child{
@@ -27,5 +27,26 @@
   &__image{
     margin-right: 15px;
     fill: $main-color;
+  }
+}
+
+
+form label input[type="submit"] {
+  display: none;
+
+}
+
+.calendar__dates input[type="date"] {
+  border: none;
+  outline: none;
+  color: $main-color;
+}
+
+@media (max-width: 767px) {
+
+  .calendar__wrapper {
+    flex-direction: column;
+    height: 120px;
+    margin-top: 20px;
   }
 }

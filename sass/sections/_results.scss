@@ -80,15 +80,15 @@
   }
 }
 
-#signups{
+.signups{
   background-color: $link-color;
 }
 
-#FTD{
+.FTD{
   background-color: $hover-color;
 }
 
-#earned{
+.earned{
   background-color: $positive-color;
 }
 
@@ -118,7 +118,6 @@
 
   &__bar {
     width: 35%;
-    background-color: green;
 
     &__graph {
       list-style: none;
@@ -138,15 +137,26 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-bottom: 40px;
 
     &__result {
       flex: calc(100% / 11);
       border-left: $border-main;
       border-bottom: $border-main;
+      counter-increment: my-awesome-counter;
 
       &:first-child {
         border-bottom: none;
         border-left: $border-main;
+      }
+
+      &:after {
+        width: 100%;
+        height: 20px;
+        padding-top: 5px;
+        margin-top: 5px;
+        content: counter(my-awesome-counter);
+        @include flex(row, center, center);
       }
     }
   }
@@ -232,5 +242,4 @@
       margin-bottom: 5px;
     }
   }
-
 }
