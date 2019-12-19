@@ -40,7 +40,6 @@
   &__url {
     flex: 40%;
     color: $link-color;
-    font-size: 15px;
     font-weight: 200;
   }
 
@@ -81,8 +80,7 @@
   .links__list__item {
 
     h4 {
-      font-size: 18px;
-      margin: 10px 0 5px 0;
+      margin: 10px 0 10px 0;
       overflow: hidden;
     }
   }

@@ -138,17 +138,17 @@
           <nav class="nav__small-screen nav__small-screen--invisible">
             <div class = "nav__small-screen__wrapper">
               <ul class="nav__small-screen__list">
-                <li><a href="index.html">General</a></li>
-                <li><a href="details.html">Details</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="banners.html">Banners</a></li>
-                <li><a href="personal.html">Personal data</a></li>
-                <li><a href="payout.html">Payout</a></li>
-                <li><a href="postback.html">Postback</a></li>
-                <li><a href="wallet.html">Wallet</a></li>
-                <li><a href="messages.html">Messages</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="logout.html">Logout</a></li>
+                <li><a href="index.html"><h3>General</h3></a></li>
+                <li><a href="details.html"><h3>Details</h3></a></li>
+                <li><a href="links.html"><h3>Links</h3></a></li>
+                <li><a href="banners.html"><h3>Banners</h3></a></li>
+                <li><a href="personal.html"><h3>Personal data</h3></a></li>
+                <li><a href="payout.html"><h3>Payout</h3></a></li>
+                <li><a href="postback.html"><h3>Postback</h3></a></li>
+                <li id="wallet-mobile"><h3>Wallet</h3></li>
+                <li id="messages-mobile"><h3>Messages</h3></li>
+                <li id="user-mobile"><h3>User</h3></li>
+                <li id="logout-mobile"><h3>Logout</h3></li>
               </ul>
             </div>
           </nav>
@@ -157,7 +157,7 @@
             <header class="header">
               <div class="header__wrapper">
                 <ul class="header__items">
-                  <li class="header__item">
+                  <li class="header__item" id="wallet">
                     <div class="header__item__image">
                       <svg width="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 17 18" style="enable-background:new 0 0 17 18;" xml:space="preserve">
@@ -174,7 +174,7 @@
                       </svg>
                     </div>
                   </li>
-                  <li class="header__item">
+                  <li class="header__item" id="messages">
                     <div class="header__item__image">
                       <svg width="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 18 19" style="enable-background:new 0 0 18 19;" xml:space="preserve">
@@ -186,7 +186,7 @@
                     <div class="header__item__message--new">
                     </div>
                   </li>
-                  <li class="header__item">
+                  <li class="header__item" id="user">
                     <div class="header__item__image">
                       <svg width ="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 19 19" style="enable-background:new 0 0 19 19;" xml:space="preserve">
@@ -222,7 +222,7 @@
 
               <section class="content__data">
                 <div class="content__data__title">
-                  PERSONAL DATA
+                  <h3>PERSONAL DATA</h3>
                 </div>
                 <div class="content__data__form">
                   <form class="form" action="" method="POST">
@@ -339,15 +339,42 @@
             </main>
 
             <div class="overlay" id="overlay">
+
               <div class="modal" id="modal__logout">
                 <button class="btn-close modal__close">x</button>
 
-                <h4>Wyloguj</h4>
-                <p>Aby wylogować kliknij OK</p>
+                <h4>Log out</h4>
+                <p>If you are sure press OK</p>
 
                 <button class="btn btn-update modal__close">OK</button>
               </div>
 
+              <div class="modal" id="modal__user">
+                <button class="btn-close modal__close">x</button>
+
+                <h4>Hello Leonardo</h4>
+                <p>How are you today?</p>
+
+                <button class="btn btn-update modal__close">OK</button>
+              </div>
+
+              <div class="modal" id="modal__messages">
+                <button class="btn-close modal__close">x</button>
+
+                <h4>Messages</h4>
+                <p>No new messages today</p>
+
+                <button class="btn btn-update modal__close">OK</button>
+              </div>
+
+              <div class="modal" id="modal__wallet">
+                <button class="btn-close modal__close">x</button>
+
+                <h4>Your wallet</h4>
+                <p>You have 1500,000$ to spend</p>
+
+                <button class="btn btn-update modal__close">OK</button>
+              </div>
 
             </div>
 

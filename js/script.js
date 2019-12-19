@@ -9,6 +9,7 @@ document.querySelector('.header__menu__icon--hamburger--mobile').addEventListene
   toggleMenu();
 });
 
+
 /*show modal*/
 
 function closeModal() {
@@ -48,10 +49,46 @@ document.querySelector('#logout').addEventListener('click', function(e) {
   openModal('#modal__logout');
 });
 
+document.querySelector('#logout-mobile').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#modal__logout');
+});
+
+document.querySelector('#user').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#modal__user');
+});
+
+document.querySelector('#user-mobile').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#modal__user');
+});
+
+
+document.querySelector('#messages').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#modal__messages');
+});
+
+document.querySelector('#messages-mobile').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#modal__messages');
+});
+
+
+document.querySelector('#wallet').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#modal__wallet');
+});
+
+document.querySelector('#wallet-mobile').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#modal__wallet');
+});
 
 /* chart */
 
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = document.getElementById('chart').getContext('2d');
 Chart.defaults.global.legend.display = false;
 
 var chart = new Chart(ctx, {
@@ -66,7 +103,7 @@ var chart = new Chart(ctx, {
     },
     {
       label: 'FTD',
-      backgroundColor: '#F29E4E',
+      backgroundColor: '#F58220',
       borderColor: '#F29E4E',
       data: [ 236, 572, 101, 20, 447, 111, 550, 544, 463, 376 ],
     }]

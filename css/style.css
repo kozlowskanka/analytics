@@ -648,7 +648,12 @@ body {
 }
 
 /* Content */
+h3 {
+  font-size: 18px;
+}
+
 h4 {
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -659,6 +664,15 @@ h4 {
   }
   .nav__wrapper {
     display: none;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  h4 {
+    font-size: 19px;
+  }
+  p {
+    font-size: 17px;
   }
   /* Mobile menu */
   .nav__small-screen__wrapper {
@@ -691,7 +705,19 @@ h4 {
         flex-grow: 1;
     margin: 0;
     width: 100%;
-    font-size: 20px;
+  }
+  .nav__small-screen__list li h3 {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
   .nav__small-screen__list li a {
     text-decoration: none;
@@ -982,7 +1008,7 @@ form label input[type="submit"] {
 }
 
 .signups {
-  background-color: #56819F;
+  background-color: #8DBEC8;
 }
 
 .FTD {
@@ -995,6 +1021,7 @@ form label input[type="submit"] {
 
 .chart__wrapper {
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .chart__axis__vertical {
@@ -1489,7 +1516,6 @@ fieldset {
   -ms-flex: 40%;
       flex: 40%;
   color: #56819F;
-  font-size: 15px;
   font-weight: 200;
 }
 
@@ -1530,8 +1556,7 @@ fieldset {
         flex-direction: column;
   }
   .links__list__item h4 {
-    font-size: 18px;
-    margin: 10px 0 5px 0;
+    margin: 10px 0 10px 0;
     overflow: hidden;
   }
 }
@@ -1564,11 +1589,11 @@ fieldset {
 }
 
 .modal {
-  max-width: 600px;
+  width: 400px;
   margin: auto;
   background-color: #ffffff;
   position: relative;
-  padding: 30px;
+  padding: 20px;
   display: none;
   -ms-flex-direction: column;
       flex-direction: column;
@@ -1590,7 +1615,7 @@ fieldset {
 
 @media (max-width: 767px) {
   .modal {
-    min-width: 100%;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

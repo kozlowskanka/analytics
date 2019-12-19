@@ -81,7 +81,7 @@
 }
 
 .signups{
-  background-color: $link-color;
+  background-color: $complementary-color;
 }
 
 .FTD{
@@ -95,6 +95,7 @@
 .chart {
   &__wrapper {
     width: 100%;
+    margin-bottom: 25px;
   }
 
   &__axis__vertical {
