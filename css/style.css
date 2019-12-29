@@ -367,9 +367,7 @@ table { border-collapse: collapse; margin: 0; padding: 0; width: 100%; table-lay
 
 table th, table td { padding: 5px; text-align: center; }
 
-table th { border-bottom: 0.5px solid #bababa; }
-
-table th h4 { padding: 5px; }
+table th { border-bottom: 0.5px solid #bababa; font-size: 14px; }
 
 table td { color: #191919; padding: 10px 0; }
 
@@ -412,7 +410,7 @@ fieldset { border: 0 none; width: 60%; padding: 20px; }
 
 .form__block__row input::placeholder { color: #F58220; font-size: 15px; }
 
-.form__label { -ms-flex: 30%; flex: 30%; padding-right: 5px; }
+.form__label { -ms-flex: 30%; flex: 30%; padding-right: 5px; font-size: 14px; font-weight: 600; }
 
 .form__label h4 { margin: 0; }
 

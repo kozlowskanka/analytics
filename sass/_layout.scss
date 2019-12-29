@@ -87,7 +87,9 @@ body {
         height: 2px;
         border-radius: 2px;
         background: $main-medium-color;
-        box-shadow: 0 7px 0 0 $main-medium-color, 0 14px 0 0 $main-medium-color;
+        box-shadow:
+          0 7px 0 0 $main-medium-color,
+          0 14px 0 0 $main-medium-color;
       }
 
       &hover::before {
@@ -98,7 +100,9 @@ body {
         height: 2px;
         border-radius: 2px;
         background: red;
-        box-shadow: 0 7px 0 0 red, 0 14px 0 0 red;
+        box-shadow:
+          0 7px 0 0 red,
+          0 14px 0 0 red;
       }
     }
   }
@@ -404,7 +408,9 @@ h4 {
         height: 4px;
         border-radius: 2px;
         background: $header-color;
-        box-shadow: 0 12px 0 0 $header-color, 0 24px 0 0 $header-color;
+        box-shadow:
+          0 12px 0 0 $header-color,
+          0 24px 0 0 $header-color;
       }
     }
   }
