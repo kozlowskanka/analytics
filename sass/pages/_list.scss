@@ -31,7 +31,6 @@
 }
 
 .links_list__item {
-
   &__name{
     padding-left: 10px;
     flex: 45%;
@@ -72,13 +71,11 @@
 }
 
 @media (max-width: 767px) {
-
   .links__list li {
     flex-direction: column;
   }
 
   .links__list__item {
-
     h4 {
       margin: 10px 0 10px 0;
       overflow: hidden;

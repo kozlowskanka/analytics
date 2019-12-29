@@ -50,7 +50,6 @@ table th h4:hover {
 /* Table page*/
 
 .table {
-
   &__page {
     list-style: none;
     display: flex;
@@ -58,7 +57,6 @@ table th h4:hover {
   }
 
   &__nav {
-
     &__number {
       padding: 15px;
       color: $link-color;
@@ -81,7 +79,6 @@ table th h4:hover {
 
 
 @media (max-width: 992px) {
-
   table {
     border: 0;
 
@@ -96,11 +93,9 @@ table th h4:hover {
       width: 1px;
     }
 
-
     tr {
       display: block;
     }
-
 
     td {
       display: block;

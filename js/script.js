@@ -89,9 +89,9 @@ document.querySelector('#wallet-mobile').addEventListener('click', function(e) {
 /* chart */
 
 var ctx = document.getElementById('chart').getContext('2d');
-Chart.defaults.global.legend.display = false;
+Chart.defaults.global.legend.display = false; // eslint-disable-line
 
-var chart = new Chart(ctx, {
+var chart = new Chart(ctx, { // eslint-disable-line
   type: 'bar',
   data: {
     labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],

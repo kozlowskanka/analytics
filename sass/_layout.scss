@@ -1,6 +1,6 @@
 /* Global */
 *, *::before, *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -52,7 +52,7 @@ body {
     background: $sidebar-color;
     top: 0;
     left: 0;
-    z-index:2;
+    z-index: 2;
   }
 
   &__logo {
@@ -87,9 +87,7 @@ body {
         height: 2px;
         border-radius: 2px;
         background: $main-medium-color;
-        box-shadow:
-          0 7px 0 0 $main-medium-color,
-          0 14px 0 0 $main-medium-color;
+        box-shadow: 0 7px 0 0 $main-medium-color, 0 14px 0 0 $main-medium-color;
       }
 
       &hover::before {
@@ -100,9 +98,7 @@ body {
         height: 2px;
         border-radius: 2px;
         background: red;
-        box-shadow:
-          0 7px 0 0 red,
-          0 14px 0 0 red;
+        box-shadow: 0 7px 0 0 red, 0 14px 0 0 red;
       }
     }
   }
@@ -114,7 +110,7 @@ body {
     padding-bottom: 30px;
     border-bottom: 1px solid $sidebar-hover-color;
 
-  li {
+    li {
       height: 45px;
       width: 100%;
     }
@@ -221,8 +217,8 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     justify-content: flex-end;
   }
 
@@ -290,7 +286,6 @@ h4 {
 /* Media queries */
 
 @media (max-width: 767px) {
-
   .nav__large-screen {
     display: none;
   }
@@ -316,7 +311,8 @@ h4 {
   .nav__small-screen__wrapper {
     height: 100%;
     width: 100%;
-    margin: 0; padding-top: 60px;
+    margin: 0;
+    padding-top: 60px;
     position: fixed;
   }
 
@@ -385,14 +381,13 @@ h4 {
     }
 
     &__menu {
-
       &__icon--mobile {
-      display: block;
-      float: right;
-      margin-right: 20px;
-      height: 100%;
-      width: 60px;
-      @include flex(row, center, center);
+        display: block;
+        float: right;
+        margin-right: 20px;
+        height: 100%;
+        width: 60px;
+        @include flex(row, center, center);
       }
 
       &__icon--hamburger--mobile {
@@ -409,17 +404,8 @@ h4 {
         height: 4px;
         border-radius: 2px;
         background: $header-color;
-        box-shadow:
-          0 12px 0 0 $header-color,
-          0 24px 0 0 $header-color;
+        box-shadow: 0 12px 0 0 $header-color, 0 24px 0 0 $header-color;
       }
     }
   }
-
 }
-
-
-
-
-
-

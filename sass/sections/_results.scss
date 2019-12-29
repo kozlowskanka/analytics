@@ -31,9 +31,8 @@
   }
 
   &__item {
-
     &-left {
-    margin-right: 20px;
+      margin-right: 20px;
     }
 
     &-right {
@@ -45,7 +44,6 @@
 /* Chart */
 
 .legend {
-
   &__wrapper {
     @include flex(row, center, center);
     flex-wrap: wrap;
@@ -63,7 +61,7 @@
       background-color: $main-light-color;
     }
 
-    & > p {
+    > p {
       font-size: 16px;
     }
 
@@ -217,15 +215,13 @@
 
 
 @media (max-width: 767px) {
-
   .numbers {
 
     flex-direction: column;
 
     &__item {
-
       &-left {
-      margin: 0;
+        margin: 0;
       }
 
       &-right {
